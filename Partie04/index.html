@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>Document</title>
+    <script>
+        function run() {
+
+            
+            let xhr = new XMLHttpRequest(); 
+            var url = 'http://localhost:5001/users';
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            }
+            xhr.send();
+        }
+        run();
+    </script>
+</head>
+<body>
+</body>
+</html>
